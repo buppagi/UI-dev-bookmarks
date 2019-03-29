@@ -66,16 +66,6 @@ gulp.task('server', function() {
 		ghostMode: { clicks: false, scroll: false }
 	});
 });
-gulp.task('polyfills', function () {
-	return gulp.src('src/js/polyfills/*.js')
-		.pipe(plumber(plumberOption))
-		.pipe(uglify({ mangle: { toplevel: true } })) // 난독화
-			.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-		.pipe(concat('polyfills.min.js')) // 병합
-		.pipe(sourcemaps.write(opts.mapPath))
-		.pipe(gulp.dest(opts.destPath + '/js/libs'))
-		.pipe(reload({ stream: true }));
-});
 gulp.task('plugins', function () {
 	return gulp.src('src/js/plugins/*.js')
 		.pipe(plumber(plumberOption))
@@ -155,8 +145,7 @@ gulp.task('deploy', function () {
 
 // 파일 변경 감지 및 브라우저 재시작
 gulp.task('watch', function() {
-	gulp.watch('src/js/polyfills/*.js', ['polyfills'] );
-	gulp.watch('src/js/plugins/*.js', ['plugins'] );
+	gulp.watch('src/js/plugins/**/*.js', ['plugins'] );
 	gulp.watch('src/js/ui.js', ['js'] );
 	gulp.watch('src/scss/*.scss', ['sass'] );
 	gulp.watch('src/html/*.html' + '/*.html', ['html'] );
