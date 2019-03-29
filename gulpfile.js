@@ -119,7 +119,7 @@ var password = FTPConfig.ftp.pw;
 
 var localFiles = [
 	'dist/**/*.*',
-	'*.html'
+	'index.html'
 ];
 
 var remoteLocation = '/';
@@ -148,8 +148,8 @@ gulp.task('watch', function() {
 	gulp.watch('src/js/plugins/**/*.js', ['plugins'] );
 	gulp.watch('src/js/ui.js', ['js'] );
 	gulp.watch('src/scss/*.scss', ['sass'] );
-	gulp.watch('src/html/*.html' + '/*.html', ['html'] );
-	gulp.watch(['*.html', 'dist/**/*.*'], { base: '.', buffer: false }, ['deploy'] );
+	gulp.watch('src/html/*.html', ['html'] );
+	gulp.watch(['index.html', 'dist/**/*.*'], { base: '.', buffer: false }, ['deploy'] );
 
 	gulp.watch('./dist/**/*.*').on('change', reload);
 });

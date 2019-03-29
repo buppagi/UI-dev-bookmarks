@@ -91,7 +91,7 @@ var isMobile = {
 		Gnb:function(navi){
 			var $navi = '';
 
-			$navi += '<ul>';
+			$navi += '<ul class="navigation" role="navigation">';
 			$navi += '<li><button class="menu-item button"><span class="txt">전체</span></button></li>';
 			for(var i=0; i < navi.length; i++) {
 				$navi += '<li>';
@@ -114,8 +114,6 @@ var isMobile = {
 					case '워드프레스':
 						$navi += '<button class="menu-item button" data-filter="'+ $wp +'">';
 						break;
-					default:
-						$navi += '<button class="menu-item button" data-filter="*">';
 				}
 				$navi += '<span class="txt">' + navi[i] + '</span>';
 				$navi += '</button>';
@@ -124,6 +122,7 @@ var isMobile = {
 			$navi += '</ul>';
 			$navi += '<button class="btn-search" id="btnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>';
 			$header.find('.menu').append($navi);
+			$header.find('.navigation > li:last').remove();
 		},
 		searchForm: function(){
 			var elem = $('#btnSearch');

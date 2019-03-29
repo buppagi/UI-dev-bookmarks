@@ -11,7 +11,6 @@ footer {
 		color:#63b6ff;
 	}
 	.copy {
-		margin-top:0.5em;
 		@include font-size(13);
 		color:#747a82;
 	}
@@ -26,4 +25,7 @@ footer {
 .footer-wrap {
 	margin:0 auto;
 	width:$contsWrap;
+}
+.footer-home-wrap {
+	color:rgba(255, 255,255, 0.7);
 }
