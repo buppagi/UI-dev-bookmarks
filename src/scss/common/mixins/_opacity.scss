@@ -1,0 +1,10 @@
+/// Opacity
+/// @param {Double} $opacity [0.5] - Opacity
+/// @require {mixin} css3-prefix
+
+@mixin opacity($opacity: 0.5) {
+	$opacity-ie: ($opacity * 100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacity-ie + ")";
+	filter:alpha(opacity=$opacity-ie);
+	@include css3-prefix('opacity', $opacity);
+}

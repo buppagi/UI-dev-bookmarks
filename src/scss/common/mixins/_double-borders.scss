@@ -1,0 +1,15 @@
+/// Double Borders
+/// @param {Color} $colorOne [#3C3C3C] - Color One
+/// @param {Color} $colorTwo [#999999] - Color Two
+/// @param {Size} $radius [0] - Radius
+/// @require {mixin} css3-prefix
+/// @require {mixin} border-radius
+
+@mixin double-borders($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0) {
+	border: 1px solid $colorOne;
+
+	@include css3-prefix('box-shadow', 0 0 0 1px $colorTwo);
+
+	@include border-radius( $radius );
+}
+

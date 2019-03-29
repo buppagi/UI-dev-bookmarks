@@ -1,0 +1,20 @@
+@include keyframes(kenburnsTopRight) {
+  0% {
+    @include transform(scale(1) translate(0, 0));
+    @include transform-origin(84% 16%);
+  }
+  100% {
+    @include transform(scale(1.25) translate(20px, -15px));
+    @include transform-origin(right top);
+  }
+}
+
+@mixin kenburnsTopRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(kenburnsTopRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

@@ -1,0 +1,422 @@
+@charset 'UTF-8';
+/** normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+/**
+* 1. 기본 글꼴을 sans-serif로 설정.
+* 2. iOS와 IE에서 기기 회전시에 사용자가 확대하지 않아도 글씨 크기가 재조정되는 것을 예방.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * 기본 마진값을 제거.
+  */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * IE8/9에서 정의되지 않은 HTML5 요소를 'block'으로 지정.
+ * IE10/11, Firefox에서 정의되지 않은 `detail` 혹은 `summary` 를 `block`으로 지정.
+ * IE11에서 정의되지 않은 `main`을 `block`으로 지정
+ */
+
+article,
+aside,
+details, /* 1 */
+figcaption,
+figure,
+footer,
+header,
+main, /* 2 */
+menu,
+nav,
+section,
+summary { /* 1 */
+  display: block;
+}
+
+/**
+ *  IE8/9에서 `inline-block`으로 정의되지 않은 것을 올바르게 지정.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+  * 모던 브라우저들에서 controls 속성없이 audio 요소가 렌더링 되는 것을 예방
+  * iOS 5 기기에서 높이를 초과하는 것을 제거
+*/
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Chrome, Firefox, Opera에서 `progress`의 세로 정렬을 표준화.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * `[hidden]` 속성의 스타일이 IE 8/9/10에서 존재하지 않는 것을 해결. 
+ * IE 8/9/10/11, Safari, Firefox < 22 에서 `template` 요소를 숨김.
+ */
+
+template, /* 1 */
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * IE10에서 활성화(active)된 링크의 회색 배경을 제거.
+ * 아이폰 iOS 이상 및 Safari 8 이상에서 밑줄 링크의 격차를 제거
+  */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * active/hover 상태일때에도 포커스된 요소의 가독성을 향상.
+ */
+ 
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. 파이어 폭스에서 아래쪽 테두리를 제거.
+ * 2. IE 8/9/10/11, Safari, Chrome에서 존재하지 않는 스타일을 부여.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Firefox 4+, Safari, Chrome에서 `bolder`로 설정되어 있는 것을 기본으로  수정.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Safari,Chrome에서 존재하지 않는 스타일을 부여.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Firefox 4+, Safari, Chrome에서 `section`과 
+ * `article` 내부의 `h1` 요소의 글꼴 크기와 마진값이 서로 다른 것을 통일시킴.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * IE 8/9에서 존재하지 않는 스타일을 부여.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * 브라우저마다 다른 글꼴 크기를 통일시킴.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * `sub`과 `sup`요소가 모든 브라우저에서 `line-height`에 영향을 미치는 것을 예방.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * IE 8/9/10에서 `a` 요소안에 이미지가 위치할 경우 생기는 테두리 제거.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * IE 9/10/11에서 `svg` 요소가 영역의 크기를 벗어나지 않도록 수정.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 모든 브라우저에서 글꼴과 글꼴 크기가 다른 것을 해결.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. color 속성이 상속되지 않는 것을 수정.
+ *    알려진 문제: disabled 된 요소의 color 속성에도 영향을 미친다.
+ * 2. font 속성이 상속되지 않는 것을 수정.
+ * 3. Firefox 4+, Safari, Chrome에서 마진이 서로 다른 것을 해결.
+ */
+
+button,
+input,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * 글꼴 굵기를  복원
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * IE 8/9/10/11에서 `overflow` 속성값이 `hidden`으로 설정되어 있는 것을 수정
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * `button`과 `select` 요소에 `text-transform` 상속이 일치하지 않는 것을 해결
+ * 모든 다른 폼 컨트롤 요소는 `text-transform` 값을 상속하지 않는다.
+ * IE 8/9/10/11, Firefox, Opera에서 `button` 요소의 스타일 상속 수정.
+ * Firefox에서 `select` 요소의 스타일 상속 수정.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Android 4.0.*에서 `audio`와 `video` 컨트롤을 파괴하는 웹킷 버그를 방지.
+ * 2. iOS에서 클릭가능한 `input` 유형에 스타일링을 할 수 없는 것을 수정.
+ * 3. `input` 요소와 다른 요소들의 image-type의 커서 모양을 일치시켜 가용성을 향상.  
+ *    `input` and others.
+ */
+
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Firefox 4+에서 내부 `padding`과 `border`를 제거 
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * `border`, `margin`, `padding`을 일치.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. IE 8/9/10/11에서 `color`는 상속되지 않는다.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. IE 8/9/10에서 box sizing 속성값을 `content-box`에서 `border-box`로 변경
+ * 2. IE 8/9/10에서 영역을 벗어나지 않도록 `padding`을 제거 
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Chrome의 증가/감소 버튼의 커서 모양을 수정.
+ * `input` 요소의 특정 `font-size` 값에 대해 감소 버튼의 커서 모양이 `default`에서 `text`로 변한다.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * OS X의 Safari, Chrome에서 내부(inner) `padding`과 검색 취소 버튼을 제거. 
+  */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ui-dev-bookmarks",
+  "version": "2.0.0",
+  "main": "ui-dev-bookmarks",
+  "description": "Bookmarks for UI Developer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buppagi/ui-dev-bookmarks.git"
+  },
+  "author": {
+    "name": "buppagi"
+  },
+  "homepage": "https://buppagi.github.io/ui-dev-bookmarks/",
+  "license": "MIT",
+  "style": "./dist/ui_bookmarks.min.css",
+  "devDependencies": {
+    "browser-sync": "^6.8.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^6.8.0",
+    "gulp-header": "^2.0.7"
+  }
+}

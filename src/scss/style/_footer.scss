@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+
+footer {
+	padding:1.5em 0;
+	@include font-size(14);
+	text-align:center;
+	color:#fff;
+	background-color:$footer;
+	strong {
+		font-weight:500;
+		color:#63b6ff;
+	}
+	.copy {
+		margin-top:0.5em;
+		@include font-size(13);
+		color:#747a82;
+	}
+	ul {
+		@include clearfix;
+	}
+	li {
+		padding:4px 20px 0 0;
+		float:left;
+	}
+}
+.footer-wrap {
+	margin:0 auto;
+	width:$contsWrap;
+}

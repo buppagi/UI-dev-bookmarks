@@ -1,0 +1,49 @@
+// Mixins
+// --------------------------------------------------
+
+// Utilities
+@import "mixins/css3-prefix";
+@import "mixins/hide-text";
+@import "mixins/opacity";
+@import "mixins/image";
+@import "mixins/reset-filter";
+@import "mixins/resize";
+@import "mixins/responsive-visibility";
+@import "mixins/size";
+@import "mixins/reset-text";
+@import "mixins/text-emphasis";
+@import "mixins/text-overflow";
+@import "mixins/vendor-prefixes";
+@import "mixins/keyframes";
+@import "mixins/respond-to";
+
+// Skins
+@import "mixins/background-variant";
+@import "mixins/background";
+@import "mixins/border-radius";
+@import "mixins/double-borders";
+@import "mixins/triple-borders";
+@import "mixins/gradients";
+
+// Layout
+@import "mixins/clearfix";
+@import "mixins/center-block";
+@import "mixins/box";
+
+// fonts
+@import "mixins/font-face";
+@import "mixins/font-size";
+@import "mixins/text-overflow";
+@import "mixins/text-shadow";
+@import "mixins/text-truncate";
+@import "mixins/outline-radius";
+@import "mixins/placeholder";
+
+// animation
+@import "mixins/rotate";
+@import "mixins/transform";
+@import "mixins/transition";
+@import "mixins/animation";
+
+//function
+@import "mixins/trig.scss";

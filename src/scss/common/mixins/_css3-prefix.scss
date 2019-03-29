@@ -1,0 +1,25 @@
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+// ie 브라우저 포함
+@mixin css3-prefix-ie($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-khtml-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+//ie 브라우저 지원 안함
+@mixin css3-prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+
+@mixin css3-prefix-webkit($property, $value) {
+	-webkit-#{$property}: #{$value};
+	#{$property}: #{$value};
+}

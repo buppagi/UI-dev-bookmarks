@@ -1,0 +1,14 @@
+// 크기 조정
+
+// IE 지원 안됨.
+@mixin resizable($direction) {
+	resize: $direction; // Options: horizontal, vertical, both
+	overflow: auto; // Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`
+}
+
+/// Resize
+/// @param {*} $directoin [both] - Direction
+/// @require {mixin} css3-prefix
+@mixin resize($direction: both) {
+	@include css3-prefix('resize', $direction);
+}

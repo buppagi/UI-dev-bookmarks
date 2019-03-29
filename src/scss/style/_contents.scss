@@ -1,0 +1,115 @@
+@charset 'UTF-8';
+
+.fa {
+	vertical-align:middle;
+}
+.button {
+	input[type=radio] {
+		display:none;
+	}
+}
+.button-group {
+	@include clearfix;
+}
+
+.grid {
+	z-index:2;
+	margin:0 auto;
+	@include clearfix;
+}
+.gutter-sizer {
+	width:4%;
+}
+.grid-item {
+	position:relative;
+	margin:0 5px 20px;
+	width:22%;
+	background-color:$contents;
+	@include box-shadow( 3px,3px,8px,0,rgba(0,0,0,0.2) );
+	box-sizing:border-box;
+}
+
+.entry-hotlink {
+	padding:10px;
+}
+#container {
+	background-color:$contents;
+}
+.contents {
+	padding-bottom:5%;
+	margin:0 auto;
+	.contents-header {
+		padding:2.5em 1em;
+		max-width:100%;
+		@include clearfix;
+	}
+	h1 {
+		font-size:$font-size-large;
+	}
+}
+
+.bookmark_lists {
+	@include clearfix;
+	.entry-hotlink {
+		position:relative;
+		background-color:$white;
+		@include clearfix;
+		word-break:break-all;
+		white-space:normal;
+		@include border-radius(6px);
+		.folded-corner {
+			position: absolute;
+			top: 1px;
+			right: 1px;
+			width: 0px;
+			height: 0px;
+			display:block;
+			background:$contents;
+			-webkit-box-shadow: 1px -1px 0px $contents, 0 1px 1px rgba(0,0,0,0.1), -1px 1px 1px rgba(0,0,0,0.1);
+			-moz-box-shadow: 1px -1px 0px $contents, 0 1px 1px rgba(0,0,0,0.1), -1px 1px 1px rgba(0,0,0,0.1);
+			box-shadow: 1px -1px 0px $contents, 0 1px 1px rgba(0,0,0,0.1), -1px 1px 1px rgba(0,0,0,0.1);
+			border-width: 0;
+			border-style: solid;
+			-webkit-border-bottom-left-radius: 15px;
+			-moz-border-radius: 0 0 0 15px;
+			border-radius: 0 0 0 15px;
+			border-color: $white $contents $white transparent;
+			@include transition(border-width 0.2s ease-out);
+		}
+		&:hover {
+			.folded-corner {
+				border-width:0 30px 30px 0;
+			}
+		}
+	}
+	.cat-hotlink {
+		color:#939ea6;
+		> a {
+			font-size:10px;
+			color:#939ea6;
+			line-height:1;
+			text-decoration:none;
+		}
+	}
+	.title_hotlink {
+		font-size:1rem;
+		clear:none;
+	}
+	.bookmark_desc {
+		font-size:0.81rem;
+		margin-top:5px;
+		padding-top:5px;
+		line-height:1.5;
+		color:$gray-light;
+		border-top:1px dotted #dadfe3;
+	}
+	.bookmark_tag {
+		padding-top:10px;
+		.tag-item {
+			margin:0 5px;
+			font-size:$font-size-small;
+			color:$green;
+			text-transform:uppercase;
+		}
+	}
+}

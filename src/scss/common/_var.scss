@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+$contsWrap:1100px !default;
+
+//== Colors
+$black:     				#000 !default;
+$black2:     				#222 !default;
+$blue:      				#0275d8 !default;
+$chocolate: 			#d2691e !default;
+$coral:     				#ff7f50 !default;
+$darkorange:			#ff8c00 !default;
+$gold:					#ffd700 !default;
+$green:     				#5cb85c !default;
+$red:       				#d9534f !default;
+$orange:    				#f0ad4e !default;
+$limegreen:				#32cd32 !default;
+$midnightblue:			#191970 !default;
+$navy:					#000080 !default;
+$teal:      				#5bc0de !default;
+$pink:      				#ff5b77 !default;
+$purple:    				#613d7c !default;
+$yellow:    				#ffd500 !default;
+$yellowgreen:			#9acd32 !default;
+$white:     				#fff !default;
+
+// Create grayscale
+$gray-dark:                 	#292b2c !default;
+$gray:                      		#464a4c !default;
+$gray-light:		              #636c72 !default;
+$gray-lighter:       	       #eceeef !default;
+$gray-lightest:          	#f7f7f9 !default;
+
+
+$brand-primary:             	$blue !default;
+$brand-success:             $green !default;
+$brand-info:                	$teal !default;
+$brand-warning:             	$orange !default;
+$brand-danger:              	$red !default;
+$brand-inverse:             	$gray-dark !default;
+
+
+$header:$darkorange;
+$contents:#e6e6e6;
+$footer:#212121;
+$c_red:#ed4949;
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color:            $gray !default;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+$font-family-sans-serif: 				"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// Default monospace fonts for '<code>', '<kbd>', and '<pre>';
+$font-family-monospace:   			"Courier New", monospace !default;
+$font-family-base:					"Noto Sans CJK KR", 'AppleGothic', "맑은 고딕", 'MalgunGothic', sans-serif;
+/* Thin 100, Light 300, DemiLight 350, Regular 400, Medium 500, Bold 700, Black 900 */
+
+$font-size-base:						16px !default;
+$font-size-large:					ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:					ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:						floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:						floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:						ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            				ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            				$font-size-base !default;
+$font-size-h6:            				ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$line-height-base:					1.428571429 !default; // 20/14
+$line-height-computed:    			floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$border-width: 1px !default;
+
+
+$hr-border-color: rgba($black,.1) !default;
+$hr-border-width: $border-width !default;
+
+// == Tables
+//
+$table-cell-padding:					8px !default;
+$table-condensed-cell-padding:		5px !default;
+// ** Default background color used for all tables.
+$table-bg:							transparent !default;
+// ** Default background color used for '.table-striped'.
+$table-bg-accent:               			#f9f9f9 !default;
+//** Background color used for '.table-hover'.
+$table-bg-hover:					#f5f5f5 !default;
+$table-bg-active:					$table-bg-hover !default;
+
+//** Border color for table and cell borders.
+$table-border-color:				#ddd !default;
+
+//== Buttons
+//
+$btn-font-weight:					normal !default;
+
+//** Border color for inputs on focus
+$input-border-focus:             			#66afe9 !default;
+
+//** Placeholder text color
+$input-color-placeholder:        		#999 !default;

@@ -1,0 +1,16 @@
+/// Rotate
+///
+/// CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+/// @param {Double} $deg [0] - Degree
+/// @param {Double} $m11 [0] - M11
+/// @param {Double} $m12 [0] - M12
+/// @param {Double} $m21 [0] - M21
+/// @param {Double} $m22 [0] - M22
+/// @require {mixin} css3-prefix
+
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+	@include css3-prefix('transform', rotate($deg + deg));
+	filter: progid:DXImageTransform.Microsoft.Matrix(
+		M11=#{$m11}, M12=#{$m12}, M21=#{$m21}, M22=#{$m22}, sizingMethod='auto expand');
+	zoom: 1;
+}

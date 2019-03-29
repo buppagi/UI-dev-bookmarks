@@ -1,0 +1,20 @@
+@include keyframes(kenburnsBottomRight) {
+  0% {
+    @include transform(scale(1) translate(0, 0));
+    @include transform-origin(84% 84%);
+  }
+  100% {
+    @include transform(scale(1.25) translate(20px, 15px));
+    @include transform-origin(right bottom);
+  }
+}
+
+@mixin kenburnsBottomRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(kenburnsBottomRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

@@ -1,0 +1,7 @@
+/// Outline Radius
+/// @param {Size} $radius [5px] - Radius
+/// @require {mixin} css3-prefix
+
+@mixin outline-radius($radius: 5px) {
+	@include css3-prefix('outline-radius', $radius);
+}

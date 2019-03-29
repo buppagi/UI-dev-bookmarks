@@ -1,0 +1,30 @@
+// Image Mixins
+// - Responsive image
+// - Retina image
+
+
+// Responsive image
+//
+@mixin img-responsive ($display:block) {
+	display: $display;
+	max-width: 100%; 
+	height: auto;
+}
+
+
+// Retina image
+//Source: https://jackiedelia.com/add-retina-ready-background-images-using-sass-mixin/
+@mixin img-retina ($image, $extension, $width, $height, $position: center, $repeat: no-repeat) {
+	background: url($image + '.' + $extension) $repeat $position;
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		background: url($image + '@2x' + '.' + $extension) $repeat $position;
+		background-size: $width $height;
+	}
+}

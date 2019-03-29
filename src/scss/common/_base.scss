@@ -1,0 +1,104 @@
+/** bookmark Common CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin:0;
+	padding:0;
+}
+html {
+	font-size:$font-size-base;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	direction:ltr;
+}
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $text-color;
+	background-color: $body-bg;
+}
+ol, ul {
+	list-style: none;
+}
+fieldset {
+		border:0;
+	legend {
+		display:none;
+	}
+}
+table {
+	width:100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th, td {
+	padding:0;
+}
+button, img {
+	border:0;
+}
+img {
+	vertical-align:middle;
+}
+button {
+	cursor:pointer;
+}
+address {
+	font-style:normal;
+}
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+// IE clear button remove
+input[type=password] {
+	padding:0;
+}
+input[type=text] {
+	padding:0;
+	&::-ms-clear {
+		display:none;
+		width:0;
+		height:0;
+	}
+	&::-ms-reveal {
+		display:none;
+		width:0;
+		height:0;
+	}
+}
+a {
+	color:$link-color;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+}
+hr {
+	margin-top:    $line-height-computed;
+	margin-bottom: $line-height-computed;
+	border: 0;
+	border-top:1px solid $hr-border-width;
+}
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+[role="button"] {
+	cursor: pointer;
+}
+
+.cover {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}

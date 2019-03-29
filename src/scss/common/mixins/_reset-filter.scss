@@ -1,0 +1,8 @@
+// IE 를 위한 필터 재설정
+//
+// 그라이언트 배경을 제거해야하는 경우 사용하여 배경을 재설정해야 한다.
+// IE9 이하 버전
+
+@mixin reset-filter() {
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}

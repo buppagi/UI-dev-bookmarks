@@ -1,0 +1,5 @@
+@mixin text-truncate {
+	overflow: hidden;
+	@include css3-prefix('text-overflow', 'ellipsis');
+	white-space:nowrap;
+}

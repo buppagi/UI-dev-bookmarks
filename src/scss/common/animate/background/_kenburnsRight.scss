@@ -1,0 +1,20 @@
+@include keyframes(kenburnsRight) {
+  0% {
+    @include transform(scale(1) translate(0, 0));
+    @include transform-origin(84% 50%);
+  }
+  100% {
+    @include transform(scale(1.25) translateX(20px));
+    @include transform-origin(right);
+  }
+}
+
+@mixin kenburnsRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(kenburnsRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

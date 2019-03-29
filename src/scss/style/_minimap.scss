@@ -1,0 +1,41 @@
+.minimap {
+    z-index : 10000;
+    position : fixed;
+    cursor: pointer;
+    @include background-opacity($black, 0.5);
+    box-shadow:0 0 10px rgba(32, 32, 32, .5);
+    .contents {
+        min-width:100%;
+        width:100%;
+        padding-bottom:0;
+    }
+}
+
+.miniregion {
+    z-index : 10001;
+    position : fixed;
+    background : transparent;
+    border:2px solid #c0c0c0;
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    @include border-radius(5px);
+}
+
+.miniregion.dragging {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+.miniregion:hover {
+    box-shadow: 0 0 0.4em darkgrey;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

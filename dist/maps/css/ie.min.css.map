@@ -1,0 +1,10 @@
+/*!
+ * ui-dev-bookmarks - https://buppagi.github.io/ui-dev-bookmarks/
+ * Description - Bookmarks for UI Developer
+ * Version - 2.0.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017~2019 buppagi
+ */
+
+{"version":3,"sources":["ie.scss"],"names":[],"mappings":"AACA,8BAA8B","file":"../../scss/ie.min.css","sourcesContent":["@charset 'UTF-8';\r\n/*! ie.min.css © uidev.link */\r\n@import 'common/var';\r\n@import 'common/mixins';"]}

@@ -1,0 +1,220 @@
+// Vendor Prefixes
+//
+// All vendor mixins are deprecated as of v3.2.0 due to the introduction of
+// Autoprefixer in our Gruntfile. They have been removed in v4.
+
+// - Animations
+// - Backface visibility
+// - Box shadow
+// - Box sizing
+// - Content columns
+// - Hyphens
+// - Placeholder text
+// - Transformations
+// - Transitions
+// - User Select
+
+// Animations
+@mixin animation($animation) {
+	-webkit-animation: $animation;
+			animation: $animation;
+}
+@mixin animation-name($name) {
+	-webkit-animation-name: $name;
+			animation-name: $name;
+}
+@mixin animation-duration($duration) {
+	-webkit-animation-duration: $duration;
+			animation-duration: $duration;
+}
+@mixin animation-timing-function($timing-function) {
+	-webkit-animation-timing-function: $timing-function;
+			animation-timing-function: $timing-function;
+}
+@mixin animation-delay($delay) {
+	-webkit-animation-delay: $delay;
+			animation-delay: $delay;
+}
+@mixin animation-iteration-count($iteration-count) {
+	-webkit-animation-iteration-count: $iteration-count;
+			animation-iteration-count: $iteration-count;
+}
+@mixin animation-direction($direction) {
+	-webkit-animation-direction: $direction;
+	animation-direction: $direction;
+}
+@mixin animation-fill-mode($fill-mode) {
+	-webkit-animation-fill-mode: $fill-mode;
+	animation-fill-mode: $fill-mode;
+}
+
+// Backface visibility
+// CSS 3D 변형을 사용할 때 브라우저가 깜박 거리지 않도록 한다.
+// 기본값은 'visible'이지만 'hidden'으로 바꿀 수 있다.
+@mixin backface-visibility($visibility) {
+	-webkit-backface-visibility: $visibility;
+	-moz-backface-visibility: $visibility;
+	backface-visibility: $visibility;
+}
+
+/// Box Shadow
+/// @param {Size} $x [2px] - X
+/// @param {Size} $y [2px] - Y
+/// @param {Size} $blur [5px] - Blur
+/// @param {Color} $color [rgba(0,0,0,.4)] - Color
+/// @param {Boolean} $inset - Inset
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+	@if ($inset != "") {
+	@include css3-prefix('box-shadow', $inset $x $y $blur $color);
+	} @else {
+		@include css3-prefix('box-shadow', $x $y $blur $color);
+	}
+}
+
+/// Box Sizing
+/// @param {*} $type [border-box] - Type
+/// @require {mixin} css3-prefix
+@mixin box-sizing($type: border-box) {
+	@include css3-prefix('box-sizing', $type);
+}
+
+// CSS3 Content Columns
+/// Columns
+/// @param {Integer} $count [3] - Count
+/// @param {Integer} $gap [10] - Gap
+/// @require {mixin} css3-prefix
+@mixin columns($count: 3, $gap: 10) {
+	@include css3-prefix('column-count', $count);
+	@include css3-prefix('column-gap', $gap);
+}
+
+// Optional hyphenation
+@mixin hyphens($mode: auto) {
+	word-wrap: break-word;
+	@include css3-prefix-ie('hyphens', $mode);
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+	// Firefox
+	&::-moz-placeholder {
+		color: $color;
+		opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+	}
+	&:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+	&::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+/// Transform
+/// @param {List} $params - Params
+/// @require {mixin} css3-prefix
+@mixin transform($params) {
+	@include css3-prefix-ie('transform', $params);
+}
+
+/// Transform-Origin
+/// @param {List} $params - Params
+/// @require {mixin} css3-prefix
+@mixin transform-origin($params) {
+	@include css3-prefix-ie('transform-origin', $params);
+}
+
+
+// Transform-Style
+/// @param {List} $params - Params
+/// @require {mixin} css3-prefix
+@mixin transform-style($style: preserve-3d) {
+	@include css3-prefix-ie('transform-style', $style);
+}
+
+// Transformations
+@mixin scale($ratio) {
+	@include transform( scale($ratio) );
+}
+
+@mixin scaleX($ratio) {
+	@include transform( scaleX($ratio) );
+}
+@mixin scaleY($ratio) {
+	@include transform( scaleY($ratio) );
+}
+@mixin skew($x, $y) {
+	@include transform( skewX($x) skewY($y) );
+}
+@mixin translate($x, $y) {
+	@include transform( translate($x, $y) );
+}
+@mixin translate3d($x, $y, $z) {
+	@include css3-prefix-webkit('transform', translate3d($x, $y, $z) );
+}
+/// Rotate
+///
+/// CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+/// @param {Double} $deg [0] - Degree
+/// @param {Double} $m11 [0] - M11
+/// @param {Double} $m12 [0] - M12
+/// @param {Double} $m21 [0] - M21
+/// @param {Double} $m22 [0] - M22
+/// @require {mixin} css3-prefix
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+	@include css3-prefix('transform', rotate($deg + deg));
+	filter: progid:DXImageTransform.Microsoft.Matrix(
+		M11=#{$m11}, M12=#{$m12}, M21=#{$m21}, M22=#{$m22}, sizingMethod='auto expand');
+	zoom: 1;
+}
+@mixin rotateX($degrees) {
+	@include transform( rotateX($degrees) );
+}
+@mixin rotateY($degrees) {
+	@include transform( rotateY($degrees) );
+}
+@mixin perspective($perspective) {
+	-webkit-perspective: $perspective;
+	-moz-perspective: $perspective;
+	perspective: $perspective;
+}
+@mixin perspective-origin($perspective) {
+	-webkit-perspective-origin: $perspective;
+	-moz-perspective-origin: $perspective;
+	perspective-origin: $perspective;
+}
+
+/// Transition
+/// @param {List} $properties - Properties
+/// @require {mixin} css3-prefix
+@mixin transition($properties) {
+	@if length($properties) >= 1 {
+		@include css3-prefix('transition', $properties);
+	}
+	@else {
+		@include css3-prefix('transition',  "all 0.2s ease-in-out 0s");
+	}
+}
+@mixin transition-property($transition-property) {
+	-webkit-transition-property: $transition-property;
+	transition-property: $transition-property;
+}
+@mixin transition-delay($transition-delay) {
+	-webkit-transition-delay: $transition-delay;
+	transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration) {
+	-webkit-transition-duration: $transition-duration;
+	transition-duration: $transition-duration;
+}
+@mixin transition-timing-function($timing-function) {
+	-webkit-transition-timing-function: $timing-function;
+	transition-timing-function: $timing-function;
+}
+@mixin transition-transform($transition) {
+	-webkit-transition: -webkit-transform $transition;
+	-moz-transition: -moz-transform $transition;
+	-o-transition: -o-transform $transition;
+	transition: transform $transition;
+}
+
+// User select
+// For selecting text on the page
+@mixin user-select($select) {
+	@include css3-prefix-ie('user-select', $select);
+}
