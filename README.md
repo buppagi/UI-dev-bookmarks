@@ -3,7 +3,7 @@
 
 _2019.03 여기 github로 저장소 변경. 기존에는 비트버킷에서 비공개로 진행_
 
-[thecode.name](http://thecode.name) => [앞으로주소](https://buppagi.github.io/ui-dev-bookmarks/)로 변경하면서 리뉴얼 할 예정임. 
+[thecode.name](http://thecode.name) => [앞으로주소](http://www.meilcoding.com)로 변경하면서 리뉴얼 할 예정임. 
 
 ## 개발일지
 + [기존진행](devlog/2017.md)
