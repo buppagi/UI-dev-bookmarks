@@ -10,17 +10,27 @@
   "author": {
     "name": "buppagi"
   },
-  "homepage": "https://buppagi.github.io/ui-dev-bookmarks/",
-  "license": "MIT",
   "style": "./dist/ui_bookmarks.min.css",
   "devDependencies": {
     "browser-sync": "^6.8.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.9",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-html-tag-include": "^1.0.1",
+    "gulp-jshint": "^2.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^6.8.0",
-    "gulp-header": "^2.0.7"
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.12.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-ftp": "^0.6.1"
+  },
+  "dependencies": {
+    "del": "^5.1.0",
+    "fs": "0.0.1-security"
   }
 }
